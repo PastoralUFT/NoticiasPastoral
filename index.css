@@ -1,0 +1,618 @@
+body {
+    background-color: #efece1;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #0098BB;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    transition: color 0.3s ease;
+    margin-left: 15px;
+}
+
+.navbar a:hover {
+    color: #083d62;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar .submenu-0 {
+    position: relative;
+}
+
+.navbar .submenu-items-0 {
+    display: none;
+    position: absolute;
+    top: 105%;
+    left: 20px;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    width: 170px;
+}
+
+.navbar .submenu-items-0 li {
+    padding: 0.5px 8px;
+    border-bottom: 1px solid #083d62;
+}
+
+.navbar .submenu-items-0 li:last-child {
+    border-bottom: none;
+}
+
+.navbar .submenu-0 li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+}
+
+.navbar .submenu-0:hover .submenu-items-0 {
+    display: block;
+}
+
+.navbar .submenu {
+    position: relative;
+}
+
+.navbar .submenu-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.navbar .submenu-items li {
+    padding: 0.5px 8px;
+    border-bottom: 1px solid #083d62;
+}
+
+.navbar .submenu-items li:last-child {
+    border-bottom: none;
+}
+
+.navbar .submenu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.navbar .submenu:hover .submenu-items {
+    display: block;
+}
+
+.navbar .submenu-2 {
+    position: relative;
+}
+
+.navbar .submenu-items-2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    width: 125px;
+}
+
+.navbar .submenu-items-2 li {
+    padding: 0.5px 8px;
+    border-bottom: 1px solid #083d62;
+}
+
+.navbar .submenu-items-2 li:last-child {
+    border-bottom: none;
+}
+
+.navbar .submenu-2 li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+}
+
+.navbar .submenu-2:hover .submenu-items-2 {
+    display: block;
+}
+
+.navbar .submenu, .navbar .submenu-0, .navbar .submenu-2 { /* Para que los submenus esten encima del carrusel y no bajo de el*/
+    position: relative;
+    z-index: 2;
+}
+
+.navbar .submenu-items, .navbar .submenu-items-0, .navbar .submenu-items-2 {
+    position: absolute;
+    z-index: 3;
+}
+
+.slider-container {
+    position: relative;
+    width: 800px;
+    height: 450px;  /* Cambiado: más pequeño (anteriormente estaba en 80%) */
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    z-index: 1;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Deslizar las imágenes */
+    width: 2400px; /* Ajusta el tamaño del carrusel para que haya espacio para todas las imágenes */
+}
+
+.slider-section {
+    width: 800px;  /* Cada sección ocupará el 100% del contenedor */
+    height: 450px;
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro de su contenedor */
+    align-items: center;
+}
+
+.slider-image {
+    width: 100%;  /* Asegura que la imagen ocupe el 100% del contenedor */
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Botones de navegación */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.container-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+
+.container3, .container2, .container1 {
+    width: 30%; /* Hacemos que ocupe un 30% del ancho total, para que sea pequeño */
+    height: 350px;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo suave */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra para darle profundidad */
+    margin-top: 25px;
+    margin-left: 35px;
+}
+
+.container3 {
+    width: 30%;
+    height: 350px;
+    margin-top: 25px;
+    margin-left: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+}
+
+.image-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 80%; /* Imagen pequeña, ocupa el 80% del contenedor */
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.info-text {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: justify;
+    margin-top: -40px;
+    padding: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.dropdown-btn {
+    background-color: #0098BB;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: -10px;
+}
+
+.dropdown-btn:hover {
+    background-color: #007c96;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 70%; /* Mostrar a la derecha del botón */
+    top: -70px; /* Alineación vertical al principio */
+    background-color: #f1f1f1;
+    min-width: 160px; /* Ajusta el tamaño según lo que necesites */
+    z-index: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Agrega sombra para mejorar la apariencia */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Cambiar el color de los enlaces al pasar el cursor */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el contenido cuando el mouse está sobre el contenedor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container2 {
+    margin-top: 25px;
+    margin-left: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+}
+
+.image-container2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image2 {
+    width: 42%; /* Imagen pequeña, ocupa el 80% del contenedor */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.image3 {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.info-text2 {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: justify;
+    margin-top: -37px;
+    padding: 15px;
+}
+
+.dropdown2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.dropdown-btn2 {
+    background-color: #0098BB;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: -10px;
+}
+
+.dropdown-btn2:hover {
+    background-color: #007c96;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    left: 70%; /* Mostrar a la derecha del botón */
+    top: -70px; /* Alineación vertical al principio */
+    background-color: #f1f1f1;
+    min-width: 160px; /* Ajusta el tamaño según lo que necesites */
+    z-index: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Agrega sombra para mejorar la apariencia */
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content2 a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el contenido cuando el mouse está sobre el contenedor */
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.container1 {
+    margin-top: 25px;
+    margin-left: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
+}
+
+.image-container1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image1 {
+    width: 50%; /* Imagen pequeña, ocupa el 80% del contenedor */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.info-text1 {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: justify;
+    margin-top: -37px;
+    padding: 15px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.info {
+    font-size: 18px;
+    margin-top: -15px;
+}
+
+.dropdown1 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-left: 125px;
+}
+
+.dropdown-btn1 {
+    background-color: #0098BB;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: -5px;
+}
+
+.dropdown-btn1:hover {
+    background-color: #007c96;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    left: 70%; /* Mostrar a la derecha del botón */
+    top: -70px; /* Alineación vertical al principio */
+    background-color: #f1f1f1;
+    min-width: 160px; /* Ajusta el tamaño según lo que necesites */
+    z-index: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Agrega sombra para mejorar la apariencia */
+}
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content1 a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar el contenido cuando el mouse está sobre el contenedor */
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+.rector-wrapper {
+    display: flex;
+    justify-content: left;
+    margin-top: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.rector-conteiner, .rector-conteiner2, .rector-conteiner3 {
+    flex-direction: column;
+    background-color: #c7c1ad;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 1);
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.rector-image3 img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.grado3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    margin-top: -12px;
+}
+
+.name3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: -5px;
+}
+
+.year3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.rector-text3 {
+    font-size: 13px;
+    text-align: justify;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.rector-image2 img {
+    width: 100px;
+    height: auto;
+    border-radius: 48%;
+    margin-bottom: 10px;
+}
+
+.grado2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    margin-top: -12px;
+}
+
+
+.name2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: -5px;
+}
+
+.year2 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.rector-text2 {
+    font-size: 15px;
+    text-align: justify;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.rector-image img {
+    width: 100px;
+    height: auto;
+    border-radius: 48%;
+    margin-bottom: 10px;
+}
+
+.grado {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    margin-top: -12px;
+}
+
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: -5px;
+}
+
+.year {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.rector-text {
+    font-size: 15px;
+    text-align: justify;
+    margin: 0;
+    margin-top: 5px;
+}
