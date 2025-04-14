@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
        btn.value = 'Enviando...';
     
-       const serviceID = 'service_'; /* Colocar el service creado para pastoral */
-       const templateID = ''; /* Colocar el template */
+       const serviceID = 'service_11n1ibc'; /* Colocar el service creado para pastoral */
+       const templateID = 'template_h6wz9je'; /* Colocar el template */
     
        emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
