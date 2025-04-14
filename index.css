@@ -319,8 +319,7 @@ button:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 70%; /* Mostrar a la derecha del botón */
-    top: -30px;
+    top: 10px;
     background-color: #f1f1f1;
     min-width: 160px; /* Ajusta el tamaño según lo que necesites */
     z-index: 1;
