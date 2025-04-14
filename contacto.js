@@ -69,22 +69,22 @@ document.addEventListener("DOMContentLoaded", function() {
     // Configura EmailJS
     const btn = document.getElementById('button');
 
-    document.getElementById('form')
-     .addEventListener('submit', function(event) {
-       event.preventDefault();
-    
-       btn.value = 'Enviando...';
-    
-       const serviceID = 'service_11n1ibc'; /* Colocar el service creado para pastoral */
-       const templateID = 'template_h6wz9je'; /* Colocar el template */
-    
-       emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-          btn.value = 'Mensaje Enviado.';
-          alert('Tu mensaje a sido enviado!!! Pronto te enviaremos un mensaje con toda la información necesaria. Muchas gracias.');
-        }, (err) => {
-          btn.value = 'Send Email';
-          alert(JSON.stringify(err));
-        });
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_11n1ibc';
+   const templateID = 'template_h6wz9je';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Tu mensaje ha sido enviado.');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
     });
+});
 });
