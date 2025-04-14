@@ -419,6 +419,11 @@ footer {
     margin-top: auto;
 }
 
+footer .logo img {
+    height: 60px;
+    width: auto;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-around;
