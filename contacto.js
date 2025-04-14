@@ -73,10 +73,10 @@ document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.value = 'Enviando...';
 
    const serviceID = 'service_11n1ibc';
-   const templateID = 'template_h6wz9je';
+   const templateID = 'template_yhwqd2c';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
