@@ -486,6 +486,7 @@ footer .logo img {
 }
 
 .footer-section h3 {
+    text-align: left;
     font-size: 22px;
     margin-bottom: 15px;
     font-weight: bold;
@@ -497,6 +498,7 @@ footer .logo img {
 }
 
 .footer-section ul li {
+    text-align: left;
     margin-bottom: 10px;
     font-size: 16px;
 }
