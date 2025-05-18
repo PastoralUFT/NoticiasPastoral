@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Pastoral</title>
+    <link rel="stylesheet" href="contacto.css">
+    <link class="roboto-slab" rel="preconnect" href="https://fonts.googleapis.com">
+    <link class="roboto-slab" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link class="roboto-slab" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('pNvfWokGOwWQAvnJA')
+</script>
+      </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://finis.cl/vida-estudiantil/pastoral/">
+                <img src="logos/logo-direccion-pastoral.png" alt="Sin carga">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes_somos.html">¿Quiénes Somos?</a></li>
+                <li class="submenu">
+                    <a href="actividades.html">Actividades</a>
+                    <ul class="submenu-items">
+                        <li><a href="#">Estudiantes</a></li>
+                        <li><a href="#">Colaboradores</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Calendario</a></li>
+                <li><a href="#">Recursos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slider-section"><img src="imagenes-de-prueba/prueba.png" alt="Imagen 1"></div>
+                <div class="slider-section"><img src="imagenes-de-prueba/papa_francisco.jpeg" alt="Imagen 2"></div>
+                <div class="slider-section"><img src="imagenes-de-prueba/prueba.png" alt="Imagen 3"></div>
+            </div>
+            <div class="slider-dots"></div>
+        </div>
+
+        <section class="contact-info">
+            <div class="contact-item">
+                <img src="iconos/icono-gmail.png" alt="Email" class="contact-icon">
+                <a href="mailto:pastoral@uft.cl">pastoral@uft.cl</a>
+            </div>
+            <div class="contact-item">
+                <img src="iconos/WhatsApp_icon.png" alt="Whatsapp" class="contact-icon">
+                <a href="https://wa.me/992398882" target="_blank">+56 9 9239 8882</a>
+            </div>
+            <div class="contact-item">
+                <img src="iconos/icono-telefono.png" alt="Phone" class="contact-icon">
+                <a href="tel:+56 9 9239 8882">+56 9 9239 8882</a>
+            </div>
+            <div class="contact-item">
+                <img src="iconos/icono-instagram.png" alt="Instagram" class="contact-icon">
+                <a href="https://www.instagram.com/pastoraluft/" target="_blank">@pastoral.finis</a>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>¿Quieres más información? Envia tus datos y preguntas</h2>
+            <form id="form">
+                <div class="first">
+                  <label for="name">Nombre y Apellido</label>
+                  <input type="text" name="name" id="name">
+                </div>
+                <div class="field">
+                    <label for="tittle">R.U.T</label>
+                    <input type="text" name="tittle" id="tittle">
+                  </div>
+                <div class="first">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="email">
+                  </div>
+                <div class="field">
+                   <label for="carrera">Carrera</label>
+                   <input type="text" name="carrera" id="carrera">
+                </div>
+                <div class="message">
+                  <label for="message">Mensaje</label>
+                  <input type="text" name="message" id="message">
+                </div>            
+                <input type="submit" id="button" value="Enviar" >
+              </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <a href="quienes_somos.html"><h3>¿Quiénes Somos?</h3></a>
+                <a href="actividades.html"><h3>Actividades</h3></a>
+                <ul>
+                    <li><a href="#">Estudiantes</a></li>
+                    <li><a href="#">Colaboradores</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="https://x.com/PastoralUFT/status/593529767804014592">Twitter</a></li>
+                </ul>
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="pastoral@uft.cl"></a>pastoral@uft.cl</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Sitio Web Institucional</h3>
+                <ul>
+                    <li><a href="https://finis.cl">Universidad Finis Terrae</a></li>
+                </ul>
+                <img src="logos/organiza-direccion-pastoral.png" alt="Sin carga">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pastoral UFT. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="contacto.js"></script>
+    
+</body>
+</html>
