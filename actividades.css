@@ -223,7 +223,6 @@ header {
 
 .info-students li a:hover, .activity-colab li a:hover {
     color: #0098BB;         /* Color al pasar el mouse */
-    text-decoration: underline; /* Opcional, para dar efecto hover elegante */
 }
 
 
